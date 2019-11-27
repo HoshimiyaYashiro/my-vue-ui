@@ -39,9 +39,10 @@ body
             &:hover
                 background-color: #BEE3F8
 .ui-scroll-root
-    &:hover
+    &:hover,&:focus
         .is-vertical, .is-horizontal
             opacity: 1
+            cursor: auto
 .ui-scroll-wrap
     height: calc( 100% + 17px )
     margin-right: -17px
@@ -64,8 +65,12 @@ body
         .ui-scrollbar-thump
             width: 6px
             height: 80%
+        &.active
+            opacity: 1
     &.is-horizontal
         left: 1px
         height: 6px
         .ui-scrollbar-thump
             width: 80%
+        &.active
+            opacity: 1
