@@ -1,76 +1,81 @@
 @import url('https://fonts.googleapis.com/css?family=Crimson+Pro:400,700&display=swap')
 body
-    font-size: .875rem
-    font-family: 'Crimson Pro', serif
+  font-size: .875rem
+  font-family: 'Crimson Pro', serif
 .ui-select
-    display: inline-block
-    width: 20rem
-    position: relative
+  display: inline-block
+  width: 20rem
+  position: relative
 .ui-input-inner
-    font-size: .875rem
-    padding: 0 .875rem
-    height: 2.375rem
-    border: solid 1px #d9d9d9
-    border-radius: 2px
-    outline: none
-    cursor: pointer
-    width: calc(100% - 1.75rem)
+  font-size: .875rem
+  padding: 0 .875rem
+  height: 2.375rem
+  border: solid 1px #d9d9d9
+  border-radius: 2px
+  outline: none
+  cursor: pointer
+  width: calc(100% - 1.75rem)
 .ui-dropdown-inner
-    position: absolute
-    top: calc(100% + 5px)
-    left: 0
-    width: 100%
-    text-align: left
-    box-shadow: 0 0 1px 0 rgba(9,30,66,0.31), 0 2px 4px -1px rgba(9,30,66,0.25)
-    border: solid 1px transparent
-    overflow: hidden
-    ul
-        list-style: none
-        margin: 0
-        padding: .625rem
-        li
-            padding: .5rem
-            cursor: pointer
-            transition: all .3s ease
-            background-color: #fff
-            white-space: nowrap
-            overflow: hidden
-            text-overflow: ellipsis
-            &:hover
-                background-color: #BEE3F8
+  position: absolute
+  top: calc(100% + 5px)
+  left: 0
+  width: 100%
+  text-align: left
+  box-shadow: 0 0 1px 0 rgba(9,30,66,0.31), 0 2px 4px -1px rgba(9,30,66,0.25)
+  border: solid 1px transparent
+  overflow: hidden
+  transform-origin: top
+  transition: transform .3s ease-in-out
+  ul
+    list-style: none
+    margin: 0
+    padding: .625rem
+    li
+      padding: .5rem
+      cursor: pointer
+      transition: all .3s ease
+      background-color: #fff
+      white-space: nowrap
+      overflow: hidden
+      text-overflow: ellipsis
+      &:hover
+        background-color: #BEE3F8
 .ui-scroll-root
-    &:hover,&:focus
-        .is-vertical, .is-horizontal
-            opacity: 1
-            cursor: auto
+  &:hover,&:focus
+    .is-vertical, .is-horizontal
+      opacity: 1
+      cursor: auto
 .ui-scroll-wrap
-    height: calc( 100% + 17px )
-    margin-right: -17px
-    margin-bottom: -17px
-    overflow: scroll
-    max-height: calc(10rem + 17px)
+  height: calc( 100% + 17px )
+  margin-right: -17px
+  margin-bottom: -17px
+  overflow: scroll
+  max-height: calc(10rem + 17px)
 .ui-scrollbar-bar
-    position: absolute
-    bottom: 1px
-    right: 1px
-    opacity: 0
-    z-index: 1
-    transition: opacity .3s ease
-    .ui-scrollbar-thump
-        background: #718096
-        border-radius: 4px
+  position: absolute
+  bottom: 1px
+  right: 1px
+  opacity: 0
+  z-index: 1
+  transition: opacity .2s ease
+  .ui-scrollbar-thump
+    background: #718096
+    border-radius: 4px
     &.is-vertical
-        top: 1px
+      top: 1px
+      width: 6px
+      .ui-scrollbar-thump
         width: 6px
-        .ui-scrollbar-thump
-            width: 6px
-            height: 80%
+        height: 80%
         &.active
-            opacity: 1
+          opacity: 1
     &.is-horizontal
-        left: 1px
-        height: 6px
-        .ui-scrollbar-thump
-            width: 80%
+      left: 1px
+      height: 6px
+      .ui-scrollbar-thump
+        width: 80%
         &.active
-            opacity: 1
+          opacity: 1
+.slide-enter, .slide-leave-to
+  transform: scaleY(0)
+  opacity: .5
