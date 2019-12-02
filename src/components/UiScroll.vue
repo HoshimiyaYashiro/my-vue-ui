@@ -9,7 +9,7 @@
         @mousedown="mouseDownHandle($event, 'vertical')" ref="verticalThump"
       ></div>
     </div>
-    <div class="ui-scrollbar-bar is-horizontal" ref="horizontalScroll" @click.self.prevent="clickTrackHandle($event, 'horizontal')">
+    <div class="ui-scrollbar-bar is-horizontal" ref="horizontalScroll" :class="{active: isMouseDown}" @click.self.prevent="clickTrackHandle($event, 'horizontal')">
       <div class="ui-scrollbar-thump" 
       :style="{width: horizontal.percentage + '%', transform: 'translateX(' + horizontal.move + '%)'}" 
       @mousedown="mouseDownHandle($event, 'horizontal')" ref="horizontalThump"></div>

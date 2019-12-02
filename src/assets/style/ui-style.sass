@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Crimson+Pro:400,700&display=swap')
+@import url('https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css')
+
 body
   font-size: .875rem
   font-family: 'Crimson Pro', serif
@@ -6,6 +8,16 @@ body
   display: inline-block
   width: 20rem
   position: relative
+  .icon
+    font-size: 1.5rem
+    position: absolute
+    right: 10px
+    top: 1px
+    line-height: 2.375rem
+    cursor: pointer
+    transition: all 0.2s ease
+    &.active
+      transform: rotate(-180deg)
 .ui-input-inner
   font-size: .875rem
   padding: 0 .875rem
@@ -61,21 +73,36 @@ body
   .ui-scrollbar-thump
     background: #718096
     border-radius: 4px
-    &.is-vertical
-      top: 1px
+  &.active
+    opacity: 1
+  &.is-vertical
+    top: 1px
+    width: 6px
+    .ui-scrollbar-thump
       width: 6px
-      .ui-scrollbar-thump
-        width: 6px
-        height: 80%
-        &.active
-          opacity: 1
-    &.is-horizontal
-      left: 1px
-      height: 6px
-      .ui-scrollbar-thump
-        width: 80%
-        &.active
-          opacity: 1
+      height: 80%
+  &.is-horizontal
+    left: 1px
+    height: 6px
+    .ui-scrollbar-thump
+      width: 80%
 .slide-enter, .slide-leave-to
   transform: scaleY(0)
   opacity: .5
+.pre-text-scroll
+  animation-timing-function: linear
+  animation-delay: 0s
+  animation-iteration-count: infinite
+  animation-direction: normal
+  animation-name: none
+  &.text-scroll
+    display: inline-block
+    animation-name: scroll-text
+@keyframes scroll-text
+  0%
+    transform: translateX(0%)
+  95%
+    transform: translateX(-100%)
+  100%
+    transform: translateX(0%)
+  

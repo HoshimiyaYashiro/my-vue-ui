@@ -17,7 +17,7 @@ export default {
       select: {
         result: null,
         options: [
-          { value: "0", name: "Fate Grand Order" },
+          { value: "0", name: "Fate Grand Order Saber Ruler Narmaya Kurumi Miku Archer Lancer" },
           { value: "1", name: "Onmyoji" },
           { value: "2", name: "Sword Art Online" },
           { value: "3", name: "Date A Live" },
