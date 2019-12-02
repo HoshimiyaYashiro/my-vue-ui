@@ -1,6 +1,6 @@
 <template>
   <div class="about">
-    <UiSelect :options="select.options" :result="select.result" />
+    <UiSelect :options="select.options" v-model="select.result" :name="select.name"/>
   </div>
 </template>
 
@@ -15,7 +15,7 @@ export default {
   data() {
     return {
       select: {
-        result: null,
+        result: '1',
         options: [
           { value: "0", name: "Fate Grand Order Saber Ruler Narmaya Kurumi Miku Archer Lancer" },
           { value: "1", name: "Onmyoji" },
@@ -23,7 +23,8 @@ export default {
           { value: "3", name: "Date A Live" },
           { value: "4", name: "Code Gear" },
           { value: "5", name: "Guilty Crown" }
-        ]
+        ],
+        name: 'test-select'
       }
     };
   },
