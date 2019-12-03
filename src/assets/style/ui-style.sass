@@ -4,20 +4,10 @@
 body
   font-size: .875rem
   font-family: 'Crimson Pro', serif
-.ui-select
-  display: inline-block
-  width: 20rem
-  position: relative
-  .icon
-    font-size: 1rem
-    position: absolute
-    right: 10px
-    top: 1px
-    line-height: 2.375rem
-    cursor: pointer
-    transition: all 0.2s ease
-    &.active
-      transform: rotate(-180deg)
+input::placeholder
+  color: lightgray
+input:disabled
+  background-color: #f5f7fa
 .ui-input-inner
   font-size: .875rem
   padding: 0 .875rem
@@ -27,6 +17,8 @@ body
   outline: none
   cursor: pointer
   width: calc(100% - 1.75rem)
+  &:disabled
+    cursor: not-allowed
 .ui-dropdown-inner
   position: absolute
   top: calc(100% + 5px)
@@ -34,7 +26,6 @@ body
   width: 100%
   text-align: left
   box-shadow: 0 0 1px 0 rgba(9,30,66,0.31), 0 2px 4px -1px rgba(9,30,66,0.25)
-  border: solid 1px transparent
   overflow: hidden
   transform-origin: top
   transition: transform .3s ease-in-out
@@ -51,9 +42,15 @@ body
       overflow: hidden
       text-overflow: ellipsis
       &:hover
-        background-color: #BEE3F8
+        background-color: #EDF2F7
       &.active
-        background-color: #BEE3F8
+        color: #63B3ED
+      &.empty-option
+        height: 1rem
+      &.disabled
+        cursor: not-allowed
+        color: #c0c4cc
+        background: none
 .ui-scroll-root
   &:hover,&:focus
     .is-vertical, .is-horizontal
