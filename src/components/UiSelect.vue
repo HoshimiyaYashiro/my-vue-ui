@@ -97,7 +97,7 @@ export default {
     UiScroll,
     TextScroll
   },
-  mounted() {
+  beforeMount() {
     if (this.value) {
       for (let option of this.options) {
         if (option.value === this.value) {
@@ -108,6 +108,9 @@ export default {
     } else {
       this.optionSelected = JSON.parse(JSON.stringify(this.emptyOption));
     }
+  },
+  mounted() {
+    
   }
 };
 </script>

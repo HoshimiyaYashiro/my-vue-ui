@@ -1,13 +1,19 @@
-@import url('https://fonts.googleapis.com/css?family=Crimson+Pro:400,700&display=swap')
+@import url('https://fonts.googleapis.com/css?family=Crimson+Pro:400,700|Crimson+Text|Merriweathe|Roboto&display=swap')
 @import url('https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css')
 
-body
+#app
   font-size: .875rem
-  font-family: 'Crimson Pro', serif
-input::placeholder
-  color: lightgray
-input:disabled
-  background-color: #f5f7fa
+  font-family: 'Roboto', serif
+  line-height: 1.4
+table
+  box-sizing: border-box
+  border-collapse: collapse
+input, textarea
+  font-family: inherit
+  &:disabled
+    background-color: #f5f7fa
+  &::placeholder
+    color: lightgray 
 .ui-input-inner
   font-size: .875rem
   padding: 0 .875rem
