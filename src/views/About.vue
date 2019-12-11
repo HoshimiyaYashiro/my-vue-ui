@@ -33,7 +33,7 @@ export default {
           {
             id: 'col-label',
             name: 'ANALYSES',
-            value: null,
+            value: undefined,
             style: {
               width: '300px'
             }
@@ -74,7 +74,8 @@ export default {
                 name: 'Conso PCI (MWh)',
                 field: 'code_conso_totale_pci'
               }
-            ]
+            ],
+            disableCheckboxByCol: ['col-contract', 'col-budget']
           }, {
             id: 'group-weather-condition',
             name: 'CONDITIONS METEO',
